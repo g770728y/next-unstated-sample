@@ -1,20 +1,20 @@
 # nextjs-unstated-sample
 
-> nextjs 使用 unstated 做本地状态管理的 sample. \
+> nextjs 使用 unstated 做本地状态管理的 sample.
 
 ## 背景故事
 
 [next.js](https://github.com/zeit/next.js)是最简单的 react ssr 框架,没有之一\
 [unstated](https://github.com/jamiebuilds/unstated)是最简单的客户端状态管理库,没有之一\
 项目使用了 `apollo graphql`. apollo 也提供了`apollo-link-state`用于管理前端状态, 但是...\
-真的太难用了好不,  简单的本地状态管理还用写 gql???\
+真的太难用了好不? 简单的本地状态管理你让我写 gql???\
 果断改用 `unstated`
 
 ---
 
-最开始,  非常好用, 直到某一天...\
+最开始, 非常好用, 直到某一天...\
 服务器挂了, 原因是 nextjs 的渲染服务内存泄漏, 然后发现根源在`unstated`上\
-于是仔细分析了`unstated`的源码.  不到 200 行的代码, 总结出了这个 sample\
+于是仔细分析了`unstated`的源码. 不到 200 行的代码, 总结出了这个 sample\
 (create-next-app 里的 withUnstated sample 太过简单, 没有参考价值)\
 (google 也没有现成答案, 倒是有错误答案)
 
